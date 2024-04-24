@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import Store from "./store/store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
-
+ReactDOM.render(
+  <Provider store={Store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById("root")
 );
-
-
